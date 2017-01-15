@@ -1,0 +1,616 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/itp938/ontologies/2015/8/untitled-ontology-3"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/itp938/ontologies/2015/8/untitled-ontology-3">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Company"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Department"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeputyDirector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Developer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DevelopmentDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Director"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Employee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FinanceDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Financier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanResoursesDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ManagementDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recruter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Security"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SecurityDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemAdministrator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#PartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ReportsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#WorkAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#EmployeeCount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#FullName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Salary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Amin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DevDepartment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DevManager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DeveloperOne"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DeveloperTwo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FinanceDepartment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FinanceManager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Finansist"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HRDepartment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HRManager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ManageDepartment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MyAmazingDirector"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PRManager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SecDepartment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Security"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SweetyDeputyDirector"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Department"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PartOf"/>
+            <Class IRI="#Company"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeputyDirector"/>
+        <Class IRI="#Employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeputyDirector"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ReportsTo"/>
+            <Class IRI="#Director"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeputyDirector"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorkAt"/>
+            <Class IRI="#ManagementDepartment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Developer"/>
+        <Class IRI="#Employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Developer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ReportsTo"/>
+            <Class IRI="#Manager"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Developer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorkAt"/>
+            <Class IRI="#DevelopmentDepartment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DevelopmentDepartment"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DevelopmentDepartment"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#EmployeeCount"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DevelopmentDepartment"/>
+        <DataMaxCardinality cardinality="5">
+            <DataProperty IRI="#EmployeeCount"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Director"/>
+        <Class IRI="#Employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Director"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorkAt"/>
+            <Class IRI="#ManagementDepartment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Employee"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#FullName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FinanceDepartment"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FinanceDepartment"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#EmployeeCount"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FinanceDepartment"/>
+        <DataMaxCardinality cardinality="3">
+            <DataProperty IRI="#EmployeeCount"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Financier"/>
+        <Class IRI="#Employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Financier"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ReportsTo"/>
+            <Class IRI="#Manager"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Financier"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorkAt"/>
+            <Class IRI="#FinanceDepartment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanResoursesDepartment"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanResoursesDepartment"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#EmployeeCount"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanResoursesDepartment"/>
+        <DataMaxCardinality cardinality="2">
+            <DataProperty IRI="#EmployeeCount"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManagementDepartment"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManagementDepartment"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#EmployeeCount"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManagementDepartment"/>
+        <DataMaxCardinality cardinality="7">
+            <DataProperty IRI="#EmployeeCount"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manager"/>
+        <Class IRI="#Employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manager"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ReportsTo"/>
+            <Class IRI="#DeputyDirector"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manager"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorkAt"/>
+            <Class IRI="#ManagementDepartment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recruter"/>
+        <Class IRI="#Employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recruter"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ReportsTo"/>
+            <Class IRI="#Manager"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recruter"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorkAt"/>
+            <Class IRI="#HumanResoursesDepartment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Security"/>
+        <Class IRI="#Employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Security"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ReportsTo"/>
+            <Class IRI="#DeputyDirector"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Security"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorkAt"/>
+            <Class IRI="#SecurityDepartment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecurityDepartment"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecurityDepartment"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#EmployeeCount"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecurityDepartment"/>
+        <DataMaxCardinality cardinality="3">
+            <DataProperty IRI="#EmployeeCount"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemAdministrator"/>
+        <Class IRI="#Employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemAdministrator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ReportsTo"/>
+            <Class IRI="#Manager"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemAdministrator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorkAt"/>
+            <Class IRI="#DevelopmentDepartment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#SystemAdministrator"/>
+        <NamedIndividual IRI="#Amin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DevelopmentDepartment"/>
+        <NamedIndividual IRI="#DevDepartment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Manager"/>
+        <NamedIndividual IRI="#DevManager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Developer"/>
+        <NamedIndividual IRI="#DeveloperOne"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Developer"/>
+        <NamedIndividual IRI="#DeveloperTwo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FinanceDepartment"/>
+        <NamedIndividual IRI="#FinanceDepartment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Manager"/>
+        <NamedIndividual IRI="#FinanceManager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Financier"/>
+        <NamedIndividual IRI="#Finansist"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Recruter"/>
+        <NamedIndividual IRI="#HH"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HumanResoursesDepartment"/>
+        <NamedIndividual IRI="#HRDepartment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Manager"/>
+        <NamedIndividual IRI="#HRManager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ManagementDepartment"/>
+        <NamedIndividual IRI="#ManageDepartment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Director"/>
+        <NamedIndividual IRI="#MyAmazingDirector"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Manager"/>
+        <NamedIndividual IRI="#PRManager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SecurityDepartment"/>
+        <NamedIndividual IRI="#SecDepartment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Security"/>
+        <NamedIndividual IRI="#Security"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeputyDirector"/>
+        <NamedIndividual IRI="#SweetyDeputyDirector"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#DevManager"/>
+        <NamedIndividual IRI="#FinanceManager"/>
+        <NamedIndividual IRI="#HRManager"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#DeveloperOne"/>
+        <NamedIndividual IRI="#DeveloperTwo"/>
+    </DifferentIndividuals>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#Amin"/>
+        <Literal datatypeIRI="&xsd;string">Виноградов Павел Дмитриевич</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salary"/>
+        <NamedIndividual IRI="#Amin"/>
+        <Literal datatypeIRI="&xsd;double">60000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#DevManager"/>
+        <Literal datatypeIRI="&xsd;string">Трофимов Владислав Александрович</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salary"/>
+        <NamedIndividual IRI="#DevManager"/>
+        <Literal datatypeIRI="&xsd;double">400000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#DeveloperOne"/>
+        <Literal datatypeIRI="&xsd;string">Кочубей Даниил Русланович</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salary"/>
+        <NamedIndividual IRI="#DeveloperOne"/>
+        <Literal datatypeIRI="&xsd;double">50000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#DeveloperTwo"/>
+        <Literal datatypeIRI="&xsd;string">Антонова Анастасия Александровна</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salary"/>
+        <NamedIndividual IRI="#DeveloperTwo"/>
+        <Literal datatypeIRI="&xsd;double">120000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#FinanceManager"/>
+        <Literal datatypeIRI="&xsd;string">Никитюк Евгений Михайлович</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salary"/>
+        <NamedIndividual IRI="#FinanceManager"/>
+        <Literal datatypeIRI="&xsd;double">150000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#Finansist"/>
+        <Literal datatypeIRI="&xsd;string">Хижняков Дмитрий Владимирович</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salary"/>
+        <NamedIndividual IRI="#Finansist"/>
+        <Literal datatypeIRI="&xsd;double">80000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#HH"/>
+        <Literal datatypeIRI="&xsd;string">Лаппо Полина Владимировна</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salary"/>
+        <NamedIndividual IRI="#HH"/>
+        <Literal datatypeIRI="&xsd;double">90000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#HRManager"/>
+        <Literal datatypeIRI="&xsd;string">Сергеева Марина Владимировна</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salary"/>
+        <NamedIndividual IRI="#HRManager"/>
+        <Literal datatypeIRI="&xsd;double">250000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#MyAmazingDirector"/>
+        <Literal datatypeIRI="&xsd;string">Путин Владимир Владимирович</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salary"/>
+        <NamedIndividual IRI="#MyAmazingDirector"/>
+        <Literal datatypeIRI="&xsd;double">500000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#PRManager"/>
+        <Literal datatypeIRI="&xsd;string">Иван Охлобыстин</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salary"/>
+        <NamedIndividual IRI="#PRManager"/>
+        <Literal datatypeIRI="&xsd;double">50000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#Security"/>
+        <Literal datatypeIRI="&xsd;string">Валуев</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salary"/>
+        <NamedIndividual IRI="#Security"/>
+        <Literal datatypeIRI="&xsd;double">30000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FullName"/>
+        <NamedIndividual IRI="#SweetyDeputyDirector"/>
+        <Literal datatypeIRI="&xsd;string">Медведев Дмитрий Анатольевич</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Salary"/>
+        <NamedIndividual IRI="#SweetyDeputyDirector"/>
+        <Literal datatypeIRI="&xsd;double">250000.0</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#PartOf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PartOf"/>
+            <Class IRI="#Department"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ReportsTo"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#WorkAt"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorkAt"/>
+            <Class IRI="#Employee"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#PartOf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#PartOf"/>
+            <Class IRI="#Company"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#WorkAt"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorkAt"/>
+            <Class IRI="#Department"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
